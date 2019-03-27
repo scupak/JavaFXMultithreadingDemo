@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FibonacciNumbersController">
+   <children>
+      <TitledPane collapsible="false" text="JaxaFX Fibonacci Task">
+         <content>
+            <GridPane hgap="8.0" vgap="4.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="120.0" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Get Fibonacci of:" GridPane.halignment="RIGHT" />
+                  <TextField fx:id="numberTextField" GridPane.columnIndex="1" />
+                  <Button fx:id="goButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#goButtonPressed" text="Go" GridPane.rowIndex="1" />
+                  <Button fx:id="cancelButton" disable="true" mnemonicParsing="false" onAction="#cancelButtonPressed" prefHeight="27.0" prefWidth="119.0" text="Cancel" GridPane.rowIndex="2" />
+                  <Label fx:id="messageLabel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="fibonacciLabel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <ProgressBar fx:id="progressBar" prefWidth="300.0" progress="0.0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+         </content>
+      </TitledPane>
+   </children>
+</VBox>
