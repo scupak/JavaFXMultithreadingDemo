@@ -22,11 +22,14 @@ public class FibonacciTask extends Task<Long> {
    // Non-recursive Fibonacci method (is much faster than the recursive
    // implementation, and hence the delay in each iteration)
    private long fibonacci(int number) throws Exception {
+      if (number <= 2){
+         updateProgress(1,1);          
+      }
                              
       if (number <= 1) {
          return number;
       }
-      
+            
       long fibo = 1;
       long fiboPrev = 1;
       
